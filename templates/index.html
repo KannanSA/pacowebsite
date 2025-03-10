@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novel Nanophotonic Phenomena</title>
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <!-- AOS Library for animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="hero" data-aos="fade-down" style="background: url('{{ url_for('static', filename='images/hero-bg.jpg') }}') no-repeat center / cover; padding: 100px 0;">
+    <!-- Modified navigation bar with logo text on the top left -->
+    <nav class="apple-nav" style="display: flex; justify-content: space-between; align-items: center; padding: 0 50px;">
+      <div class="logo" style="font-size: 1.5em; font-weight: bold;">
+        <a href="/" style="text-decoration:none; color:#000;">Logo</a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 30px; margin: 0; padding: 0;">
+        <li><a href="/" style="text-decoration:none; color:#000;">Home</a></li>
+        <li><a href="/about" style="text-decoration:none; color:#000;">About</a></li>
+        <li><a href="/research" style="text-decoration:none; color:#000;">Research</a></li>
+        <li><a href="/contact" style="text-decoration:none; color:#000;">Contact</a></li>
+        <li><a href="/blog" style="text-decoration:none; color:#000;">Blog</a></li>
+      </ul>
+    </nav>
+    <!-- Hero content repositioned for a spacious layout -->
+    <div class="hero-content" style="text-align: center; color: #000; margin-top: 100px;">
+      <h1 style="font-size: 3em; margin-bottom: 0.5em;">Novel Nanophotonic Phenomena Team</h1>
+      <p style="font-size: 1.2em; margin-bottom: 0.5em;">Leading research in ultrafast light routing, spin–orbit interactions, polarization synthesis, and novel optical forces.</p>
+      <p style="font-size: 1em;">Our cutting-edge approach integrates theoretical insight with practical innovation to push the frontiers of photonics.</p>
+      <!-- New blog link button -->
+      <a class="button" href="/blog" style="display: inline-block; margin-top: 20px; padding: 10px 20px; text-decoration: none; background: #000; color: #fff;">Visit Our Blog</a>
+    </div>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>About Us</h2>
+    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="About Us Image" class="placeholder-image">
+    <p>
+      The Novel Nanophotonic Phenomena team, part of the Photonics & Nanotechnology Group in the Physics Department at King's College London, conducts both theoretical and experimental research. Our focus includes ultrafast routing of light based on spin–orbit interactions in nanophotonics, polarization analysis and synthesis using integrated nanostructures, and studying novel optical forces for manipulating nanoparticles, molecules, or single atoms near nanomaterial surfaces.
+    </p>
+    <!-- Fleshed out description -->
+    <p>We are committed to collaborative innovation, bridging disciplines to transform groundbreaking concepts into real-world applications.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Research Output</h2>
+    <img src="{{ url_for('static', filename='images/Kings_College_London_red_bg.png') }}" alt="Research Output Image" class="placeholder-image">
+    <p>View our updated publication list on King's College London's "Pure" system.</p>
+    <a class="button" href="https://pure.kcl.ac.uk/" target="_blank">View Publications</a>
+    <!-- Additional research description -->
+    <p>Explore seminal papers, recent breakthroughs, and collaborative projects that define our research legacy.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Project PSINFONI</h2>
+    <img src="{{ url_for('static', filename='images/logo_erc.png') }}" alt="Project PSINFONI Image" class="placeholder-image">
+    <p>Learn about our ERC Starting Grant project on particle–surface interaction in near-field optics.</p>
+    <!-- Expanded project details -->
+    <p>This project pioneers novel methodologies in nanophotonic control, opening avenues for revolutionary optical technologies.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Members</h2>
+    <img src="{{ url_for('static', filename='images/logo_members.jpg') }}" alt="Members Image" class="placeholder-image">
+    <p>Meet our team and read the short bios of our group members.</p>
+    <!-- Additional member info -->
+    <p>Our diverse expertise and collaborative spirit set the foundation for our innovative research environment.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>News</h2>
+    <img src="{{ url_for('static', filename='images/janus.png') }}" alt="News Image" class="placeholder-image">
+    <p>Get the latest updates and news about our research and developments.</p>
+    <a class="button" href="/blog">Read Blog</a>
+    <!-- Enhanced news section -->
+    <p>Stay informed on breakthroughs, conference highlights, and media coverage featuring our work.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Software</h2>
+    <img src="{{ url_for('static', filename='images/software.jpg') }}" alt="Software Image" class="placeholder-image">
+    <p>Explore our online tools and software developed by the team.</p>
+    <!-- Expanded software details -->
+    <p>Discover user-friendly applications that empower researchers and industry professionals alike.</p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>Contact: Francisco J. Rodríguez Fortuño</p>
+    <p>©2015 - GRID | King's College London</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ...existing head elements (meta, title, CSS links, etc.)... -->
+  <title>Blog - Novel Nanophotonic Phenomena</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header data-aos="fade-down" style="background: url('{{ url_for('static', filename='images/blog-hero.jpg') }}') no-repeat center center; background-size: cover;">
+    <h1>Blog</h1>
+    <p>Latest updates and news</p>
+  </header>
+
+  <section data-aos="fade-up">
+    <!-- Dynamic Blog Posts -->
+    {% for post in posts %}
+    <article>
+      <h2>{{ post.title }}</h2>
+      <p>Published on: {{ post.date }}</p>
+      <p>{{ post.excerpt }}</p>
+      <a class="button" href="{{ post.link }}">Read More</a>
+    </article>
+    {% else %}
+    <p>No blog posts available.</p>
+    {% endfor %}
+  </section>
+
+  <footer data-aos="fade-up">
+    <!-- ...existing footer content... -->
+    <p>Contact: Francisco J. Rodríguez Fortuño</p>
+    <p>©2015 - GRID | King's College London</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+  <!-- ...existing scripts... -->
+</body>
+</html>
